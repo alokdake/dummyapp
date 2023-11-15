@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button routerLink="/home" slot="start"> Back </ion-back-button>
+    </ion-buttons>
+    <ion-title>fab</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <div
+      style="padding: 20px; font-size: 20px; font-weight: bold"
+      *ngFor="let item of Employee"
+    >
+      <ion-item
+        style="
+          padding: 20px;
+          font-size: 20px;
+          font-weight: bold;
+          border-bottom: 1px solid;
+        "
+      >
+        <p>
+          <img
+            style="object-fit: cover; height: 100px; width: 80px"
+            src="{{item.profilepic}}"
+          />
+        </p>
+
+        <div style="display: flex; margin-left: 20px">
+          <div><p>{{item.name}}</p></div>
+          <div style="margin-left: 10px">
+            <p>{{item.job_title}}</p>
+          </div>
+        </div>
+      </ion-item>
+    </div>
+  </ion-list>
+
+  <ion-fab slot="fixed" horizontal="end" vertical="bottom">
+    <ion-fab-button>
+      <ion-icon name="add-circle-outline"> </ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button>
+        <ion-icon name="document"> </ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="color-palette"> </ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="globe"> </ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="document"> </ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="color-palette"> </ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="globe"> </ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

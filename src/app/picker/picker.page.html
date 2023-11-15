@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon routerLink="/home" slot="end" name="home-outline"></ion-icon>
+    <ion-buttons>
+      <ion-back-button routerLink="/home" slot="start"> Back </ion-back-button>
+    </ion-buttons>
+    <ion-title>picker</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button
+    (click)="ionPicker()"
+    style="margin-top: 100px; margin-left: 150px"
+  >
+    Picker
+  </ion-button>
+</ion-content>

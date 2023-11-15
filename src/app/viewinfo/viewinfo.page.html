@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon routerLink="/home" slot="end" name="home-outline"></ion-icon>
+    <ion-buttons>
+      <ion-menu-button> </ion-menu-button>
+      <ion-back-button routerLink="/scenario1" slot="start">
+        Back
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>viewinfo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf=" devel" color="danger">
+    <ion-card-header>
+      <ion-card-title>{{devel.name}}</ion-card-title>
+      <br />
+      <ion-card-subtitle>{{devel.role}}</ion-card-subtitle>
+      <ion-card-subtitle>{{devel.language}}</ion-card-subtitle>
+      <ion-card-subtitle>{{devel.location}}</ion-card-subtitle>
+      <ion-card-subtitle
+        ><a href="mailto:"> {{ devel.email }}</a></ion-card-subtitle
+      >
+    </ion-card-header>
+  </ion-card>
+</ion-content>

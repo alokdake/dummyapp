@@ -1,0 +1,104 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon routerLink="/home" slot="end" name="home-outline"></ion-icon>
+    <ion-buttons>
+      <ion-menu-button> </ion-menu-button>
+      <ion-back-button routerLink="/home" slot="start"> Back </ion-back-button>
+    </ion-buttons>
+    <ion-title>module1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content> </ion-refresher-content>
+  </ion-refresher>
+
+  <form [formGroup]="m1Form">
+    <div>
+      <p style="font-size: large; text-align: center">
+        <b>~Profile Page~</b>
+      </p>
+      <ion-icon
+        *ngIf="!finalPicture"
+        style="
+          margin-left: 188px;
+          height: 30px;
+          width: 30px;
+          text-align: center;
+        "
+        (click)="choosePhoto()"
+        name="person-circle-outline"
+        >Profile Pic</ion-icon
+      >
+      <div *ngIf="finalPicture" style="margin-top: 50px">
+        <img
+          style="
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            border: 4px solid rgb(0, 0, 0);
+            margin-left: 155px;
+          "
+          [src]="finalPicture"
+        />
+        <ion-icon
+          style="float: right"
+          (click)="delete()"
+          name="close-circle-outline"
+        ></ion-icon>
+      </div>
+
+      <ion-list>
+        <ion-item>
+          <ion-input
+            [(ngModel)]="name"
+            formControlName="name"
+            placeholder="Name"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            [(ngModel)]="username"
+            formControlName="username"
+            placeholder="Username"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            [(ngModel)]="bio"
+            formControlName="bio"
+            type="text"
+            placeholder="Bio"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            [(ngModel)]="no"
+            formControlName="no"
+            type="number"
+            placeholder="+91"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            [(ngModel)]="age"
+            type="number"
+            formControlName="no"
+            type="number"
+            placeholder="18"
+          ></ion-input>
+        </ion-item>
+      </ion-list>
+
+      <ion-button
+        id="open-custom-dialog"
+        (click)="submit()"
+        color="secondary"
+        style="width: 100%"
+      >
+        Submit
+      </ion-button>
+    </div>
+  </form>
+</ion-content>

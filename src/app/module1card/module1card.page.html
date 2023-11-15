@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon routerLink="/home" slot="end" name="home-outline"></ion-icon>
+    <ion-buttons>
+      <ion-menu-button> </ion-menu-button>
+      <ion-back-button routerLink="/module1" slot="start">
+        Back
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>module1card</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="profileInfo" color="danger">
+    <ion-card-header>
+      <img
+        style="height: 145px; width: 145px; margin-left: 225px; position: fixed"
+        src="{{profileInfo.finalPicture}}"
+      />
+      <ion-card-title>{{profileInfo.name}}</ion-card-title>
+      <br />
+      <ion-card-subtitle>{{profileInfo.username}}</ion-card-subtitle>
+      <ion-card-subtitle>{{profileInfo.bio}}</ion-card-subtitle>
+      <ion-card-subtitle>{{profileInfo.no}}</ion-card-subtitle>
+      <ion-card-subtitle>{{profileInfo.age}}</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+</ion-content>

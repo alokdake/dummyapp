@@ -1,0 +1,153 @@
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-icon routerLink="/home" slot="end" name="home-outline"></ion-icon>
+      <ion-buttons>
+        <ion-menu-button> </ion-menu-button>
+        <ion-back-button routerLink="/home" slot="start">
+          Back
+        </ion-back-button>
+      </ion-buttons>
+      <ion-title>ion-items</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-menu-toggle>
+      <ion-button color="secondary"> Click here to open menu </ion-button>
+    </ion-menu-toggle>
+
+    <ion-item href="https://www.youtube.com/" detail="true">
+      <ion-label
+        ><h3>Redirect To Youtube</h3>
+        <p>It will redirect to the Youtube</p></ion-label
+      >
+    </ion-item>
+
+    <ion-item-group>
+      <ion-item-divider color="secondary">
+        <ion-label>User Profile</ion-label>
+      </ion-item-divider>
+    </ion-item-group>
+
+    <ion-item-sliding>
+      <ion-item href="https://www.instagram.com/alok__0028/" detail="true">
+        <ion-label
+          ><h3>Alok Dake</h3>
+          <p>It will redirect to the alok__0028</p></ion-label
+        >
+        <ion-avatar slot="start">
+          <img src="../assets/Img/alok.jpg" />
+        </ion-avatar>
+      </ion-item>
+      <ion-item-options>
+        <ion-item-option routerLink="/alok">Alok's Photos</ion-item-option>
+        <ion-item-option (click)="cancel()" color="danger">
+          Cancel
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding>
+      <ion-item
+        href="https://www.linkedin.com/in/alok-dake-277289235/"
+        detail="true"
+      >
+        <ion-label
+          ><h3>Alok Dake</h3>
+          <p>It will redirect to the Linkdin</p></ion-label
+        >
+        <ion-avatar slot="start">
+          <img src="../assets/Img/virat.jpg" />
+        </ion-avatar>
+      </ion-item>
+      <ion-item-options>
+        <ion-item-option routerLink="/virat">Virat's Photos</ion-item-option>
+        <ion-item-option (click)="cancel()" color="danger"
+          >Cancel</ion-item-option
+        >
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-group>
+      <ion-item-divider>
+        <ion-label> Share to </ion-label>
+      </ion-item-divider>
+    </ion-item-group>
+
+    <ion-item detail="true">
+      <ion-avatar slot="start">
+        <img src="../assets/Img/sir.jpg" />
+      </ion-avatar>
+      <ion-label>Michael Sir</ion-label>
+      <ion-button routerLink="/grid" slot="end">Send </ion-button>
+    </ion-item>
+    <ion-item detail="true">
+      <ion-avatar slot="start">
+        <img src="../assets/Img/prof.jpg" />
+      </ion-avatar>
+      <ion-label>Mr. Professor</ion-label>
+      <ion-button routerLink="/grid" slot="end"> Send </ion-button>
+    </ion-item>
+
+    <ion-item-group>
+      <ion-item-divider color="primary">
+        <ion-label> Enter Card Details </ion-label>
+      </ion-item-divider>
+    </ion-item-group>
+
+    <ion-item counter="true">
+      <ion-label> Input </ion-label>
+      <ion-input maxlength="12" placeholder="Enter Your Card Number">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label> Toggle Button </ion-label>
+      <ion-toggle slot="end"> </ion-toggle>
+    </ion-item>
+
+    <ion-item-sliding>
+      <ion-item>
+        <ion-label> Swipe it </ion-label>
+      </ion-item>
+      <ion-item-options>
+        <ion-item-option routerLink="/home">Go Home</ion-item-option>
+        <ion-item-option (click)="cancel()" color="danger">
+          Cancel
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <div>
+      <p style="font-size: large; text-align: center">
+        <b>~User Data Form~</b>
+      </p>
+      <ion-list>
+        <ion-item>
+          <ion-label>Text input</ion-label>
+          <ion-input placeholder="Enter text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Number input</ion-label>
+          <ion-input type="number" placeholder="000"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Password input</ion-label>
+          <ion-input type="password" value="password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Email input</ion-label>
+          <ion-input type="email" placeholder="email@domain.com"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Telephone input</ion-label>
+          <ion-input type="tel" placeholder="888-888-8888"></ion-input>
+        </ion-item>
+      </ion-list>
+    </div>
+    <ion-button style="width: 100%" (click)="submit()"> Submit </ion-button>
+  </ion-content>
+</div>

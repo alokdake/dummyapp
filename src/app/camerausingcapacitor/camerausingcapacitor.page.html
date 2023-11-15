@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-menu-button> </ion-menu-button>
+      <ion-back-button routerLink="/home" slot="start"> Back </ion-back-button>
+    </ion-buttons>
+    <ion-title>camerausingcapacitor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button
+    style="margin-left: 35%; margin-top: 20px"
+    (click)="choosePhoto()"
+  >
+    Add Photo
+  </ion-button>
+  <div *ngIf="finalPicture" style="margin-top: 50px">
+    <ion-card>
+      <img [src]="finalPicture" />
+    </ion-card>
+  </div>
+</ion-content>

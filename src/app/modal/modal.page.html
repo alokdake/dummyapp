@@ -1,0 +1,173 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon routerLink="/home" slot="end" name="home-outline"></ion-icon>
+    <ion-buttons>
+      <ion-menu-button> </ion-menu-button>
+      <ion-back-button routerLink="/home" slot="start"> Back </ion-back-button>
+    </ion-buttons>
+    <ion-title>modal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background">
+  <ion-button
+    style="margin-left: 125px; margin-top: 20px; width: 150px; height: 100px"
+    color="dark"
+    size="large"
+    id="open-custom-dialog"
+    >AI 🌐</ion-button
+  >
+  <ion-modal id="example-modal" #modal trigger="open-custom-dialog">
+    <ng-template>
+      <div style="width: 350px">
+        <div class="wrapper">
+          <h1>Artificial Intelligence</h1>
+
+          <ion-img src="../assets/Img/ai.jpg"> </ion-img>
+          <p>
+            Artificial intelligence is the simulation of human intelligence
+            processes by machines, especially computer systems. Specific
+            applications of AI include expert systems, natural language
+            processing, speech recognition and machine vision.
+          </p>
+        </div>
+      </div>
+    </ng-template>
+  </ion-modal>
+
+  <!-- --------------------------------------------------------------- -->
+
+  <ion-button
+    style="margin-left: 125px; margin-top: 20px; width: 150px; height: 100px"
+    color="secondary"
+    size="large"
+    id="2"
+    >Quote ❤️</ion-button
+  >
+  <ion-modal id="example-modal" #modal trigger="2">
+    <ng-template>
+      <div style="width: 350px">
+        <div class="wrapper">
+          <h1>❤️</h1>
+
+          <ion-img src="../assets/Img/q.png"> </ion-img>
+        </div>
+      </div>
+    </ng-template>
+  </ion-modal>
+
+  <!-- --------------------------------------------------------------- -->
+
+  <ion-button
+    style="margin-left: 125px; margin-top: 20px; width: 150px; height: 100px"
+    color="medium"
+    size="large"
+    id="3"
+    >Train 🚂</ion-button
+  >
+  <ion-modal id="example-modal" #modal trigger="3">
+    <ng-template>
+      <div style="width: 350px">
+        <div class="wrapper">
+          <h1>Duronto Express</h1>
+
+          <ion-img src="../assets/Img/du.jpg"> </ion-img>
+          <p>
+            Duronto Express is a category of long-distance non-stop source to
+            destination trains run by the Indian Railways. Initially these
+            trains did not have any ticketing stops between the origin and the
+            destination, but since January 2016 it is possible to book tickets
+            from those technical stops.
+          </p>
+        </div>
+      </div>
+    </ng-template>
+  </ion-modal>
+  <!-- --------------------------------------------------------------- -->
+
+  <ion-button
+    style="margin-left: 125px; margin-top: 20px; width: 150px; height: 100px"
+    color="dark"
+    size="large"
+    id="4"
+    >Game ❤️‍🔥</ion-button
+  >
+  <ion-modal id="example-modal" #modal trigger="4">
+    <ng-template>
+      <div style="width: 350px">
+        <div class="wrapper">
+          <h1>Counter-Strike</h1>
+
+          <ion-img src="../assets/Img/cs.jpg"> </ion-img>
+          <p>
+            Counter-Strike is a series of multiplayer tactical first-person
+            shooter video games in which teams of terrorists battle to
+            perpetrate an act of terror while counter-terrorists try to prevent
+            it. The series began on Windows in 1999 with the release of the
+            first game, Counter-Strike.
+          </p>
+        </div>
+      </div>
+    </ng-template>
+  </ion-modal>
+  <!-- --------------------------------------------------------------- -->
+
+  <ion-button
+    style="margin-left: 125px; margin-top: 20px; width: 150px; height: 100px"
+    color="secondary"
+    size="large"
+    id="5"
+    >Movie ☯️</ion-button
+  >
+  <ion-modal id="example-modal" #modal trigger="5">
+    <ng-template>
+      <div style="width: 350px">
+        <div class="wrapper">
+          <h1>Skyscraper</h1>
+
+          <ion-img src="../assets/Img/sky.jpg"> </ion-img>
+          <p>
+            Will Sawyer is a former FBI agent and U.S. war veteran who now
+            assesses security for skyscrapers. While he's on assignment in
+            China, the world's tallest and safest building catches on fire --
+            and Will gets framed for it. Now a wanted man and on the run, he
+            must find those responsible, clear his name and somehow rescue his
+            family members when they become trapped inside the inferno.
+          </p>
+        </div>
+      </div>
+    </ng-template>
+  </ion-modal>
+  <!-- --------------------------------------------------------------- -->
+
+  <ion-button
+    style="margin-left: 125px; margin-top: 20px; width: 150px; height: 100px"
+    color="medium"
+    size="large"
+    id="6"
+    >Web-Series ⏳</ion-button
+  >
+  <ion-modal id="example-modal" #modal trigger="6">
+    <ng-template>
+      <div style="width: 350px">
+        <div class="wrapper">
+          <h1>The Family Man</h1>
+
+          <ion-img src="../assets/Img/fa.jpg"> </ion-img>
+          <p>
+            The Family Man is an edgy action-drama series, which tells the story
+            of a middle-class man who works for a special cell of the National
+            Investigation Agency. While he tries to protect the nation from
+            terrorists, he also has to protect his family from the impact of his
+            secretive, high-pressure, and low paying job. The Family Man is an
+            edgy action-drama series, which tells the story of a middle-class
+            man who works for a special cell of the National Investigation
+            Agency. While he tries to protect the nation from terrorists, he
+            also has to protect his family from the impact of his secretive,
+            high-pressure, and low paying job.
+          </p>
+        </div>
+      </div>
+    </ng-template>
+  </ion-modal>
+</ion-content>

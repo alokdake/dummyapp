@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>gplus</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <div *ngIf="user">
+      <ion-avatar slot="start">
+        <img [src]="user.imageUrl" />
+      </ion-avatar>
+      <b>{{user.givenName }} {{user.familyName}}</b>
+      <p>{{user.email}}</p>
+    </div>
+  </ion-card>
+
+  <ion-button
+    *ngIf="!user"
+    color="danger"
+    style="width: 100%"
+    (click)="signIn()"
+    >Sign In With Gmail</ion-button
+  >
+  <ion-button
+    *ngIf="user"
+    color="danger"
+    style="width: 100%"
+    (click)="signOut()"
+    >Sign Out</ion-button
+  >
+  <ion-button
+    *ngIf="!user"
+    color="danger"
+    style="width: 100%"
+    (click)="refresh()"
+    >Refresh</ion-button
+  >
+</ion-content>

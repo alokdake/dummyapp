@@ -1,0 +1,111 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon routerLink="/home" slot="end" name="home-outline"></ion-icon>
+    <ion-buttons>
+      <ion-menu-button> </ion-menu-button>
+      <ion-back-button routerLink="/home" slot="start"> Back </ion-back-button>
+    </ion-buttons>
+    <ion-title>popover</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button
+    style="margin-left: 125px"
+    size="round"
+    color="medium"
+    id="popover-button"
+    >Open Menu</ion-button
+  >
+  <ion-popover trigger="popover-button" [dismissOnSelect]="true">
+    <ng-template>
+      <ion-content>
+        <ion-list>
+          <ion-item
+            href="https://www.linkedin.com/in/alok-dake-277289235/"
+            [button]="true"
+            [detail]="true"
+            ><ion-label
+              ><h1>Alok Dake</h1>
+              <p>Linkdin Profile</p></ion-label
+            ></ion-item
+          >
+          <ion-item
+            href="https://www.instagram.com/alok__0028/"
+            [button]="true"
+            [detail]="true"
+            ><ion-label
+              ><h1>alok__0028</h1>
+              <p>Instagram Profile</p></ion-label
+            ></ion-item
+          >
+          <ion-item [button]="true" id="nested-trigger"
+            >More options...</ion-item
+          >
+
+          <ion-popover
+            trigger="nested-trigger"
+            [dismissOnSelect]="true"
+            side="end"
+          >
+            <ng-template>
+              <ion-content>
+                <ion-list>
+                  <ion-item routerLink="/home" [button]="true" [detail]="false"
+                    >Home Page</ion-item
+                  >
+                </ion-list>
+              </ion-content>
+            </ng-template>
+          </ion-popover>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-popover>
+
+  <br />
+  <br />
+  <ion-button
+    style="margin-left: 140px"
+    color="secondary"
+    (click)="showLoader()"
+    >Loader</ion-button
+  >
+  <br />
+  <ion-spinner style="margin-left: 160px; margin-top: 30px"> </ion-spinner>
+  <br />
+  <ion-progress-bar style="margin-top: 100px" [value]="progress">
+  </ion-progress-bar>
+
+  <ion-progress-bar
+    color="danger"
+    style="margin-top: 100px"
+    type="indeterminate"
+  >
+  </ion-progress-bar>
+
+  <br />
+
+  <ion-list>
+    <ion-radio-group value="Onkar">
+      <ion-item>
+        <ion-label> Alok </ion-label>
+        <ion-radio slot="end" value="Alok"> </ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label> Onkar </ion-label>
+        <ion-radio slot="end" value="Onkar"> </ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label> Virat </ion-label>
+        <ion-radio slot="end" value="Virat"> </ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label> Rohit </ion-label>
+        <ion-radio slot="end" value="Rohit"> </ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-range [pin]="true" [pinFormatter]="pinFormatter"></ion-range>
+</ion-content>

@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon routerLink="/home" slot="end" name="home-outline"></ion-icon>
+    <ion-buttons>
+      <ion-menu-button> </ion-menu-button>
+      <ion-back-button routerLink="/home" slot="start"> Back </ion-back-button>
+    </ion-buttons>
+    <ion-title>searchbar</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar
+      (ionChange)="searchCountry($event)"
+      placeholder="Search Countries"
+      animated="true"
+      [debounce]="1000"
+      clear-icon="trash-bin"
+    >
+    </ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of results">
+      <ion-label> {{item}} </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- <ion-searchbar> </ion-searchbar>
+  <ion-searchbar placeholder="Search Products"> </ion-searchbar>
+  <ion-searchbar value="Value"> </ion-searchbar>
+  <ion-searchbar placeholder="Search Products" animated="true"> </ion-searchbar>
+  <ion-searchbar search-icon="search-circle"> </ion-searchbar>
+  <ion-searchbar show-clear-button-="focus"> </ion-searchbar>
+  <ion-searchbar value="alok" show-clear-button="always" clear-icon="trash-bin">
+  </ion-searchbar> -->
+</ion-content>

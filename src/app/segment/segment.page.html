@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon routerLink="/home" slot="end" name="home-outline"></ion-icon>
+    <!-- <ion-buttons>
+      <ion-menu-button> </ion-menu-button>
+      <ion-back-button routerLink="/home" slot="start"> Back </ion-back-button>
+    </ion-buttons> -->
+
+    <!-- <ion-segment-button value="products">
+        <ion-label> Products </ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="orders">
+        <ion-label> My orders </ion-label>
+      </ion-segment-button> -->
+
+    <ion-segment value="custom">
+      <ion-segment-button value="custom">
+        <ion-label>Custom</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="segment">
+        <ion-label>Segment</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="buttons">
+        <ion-label>Buttons</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-select (click)="selectRole($event)" placeholder="Select Your Stream">
+        <ion-select-option *ngFor="let item of developers" value="item">
+          {{item.role}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<!-- //interface=popover,action-sheet -->

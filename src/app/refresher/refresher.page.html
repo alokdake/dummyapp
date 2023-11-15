@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon routerLink="/home" slot="end" name="home-outline"></ion-icon>
+    <ion-buttons>
+      <ion-menu-button> </ion-menu-button>
+      <ion-back-button routerLink="/home" slot="start"> Back </ion-back-button>
+    </ion-buttons>
+    <ion-title>refresher</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content> </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list>
+    <ion-reorder-group
+      [disabled]="false"
+      (ionItemReorder)="doReorder($any($event))"
+    >
+      <ion-item>
+        <ion-label> ALok </ion-label>
+        <ion-reorder slot="end"> </ion-reorder>
+      </ion-item>
+      <ion-item>
+        <ion-label> Onkar </ion-label>
+        <ion-reorder slot="end"> </ion-reorder>
+      </ion-item>
+      <ion-item>
+        <ion-label> Virat </ion-label>
+        <ion-reorder slot="end"> </ion-reorder>
+      </ion-item>
+      <ion-item>
+        <ion-label> Rishab </ion-label>
+        <ion-reorder slot="end"> </ion-reorder>
+      </ion-item>
+      <ion-item>
+        <ion-label> Rohit </ion-label>
+        <ion-reorder slot="end"> </ion-reorder>
+      </ion-item>
+      <ion-item>
+        <ion-label> FAf </ion-label>
+        <ion-reorder slot="end"> </ion-reorder>
+      </ion-item>
+      <ion-item>
+        <ion-label> Dinesh </ion-label>
+        <ion-reorder slot="end"> </ion-reorder>
+      </ion-item>
+    </ion-reorder-group>
+  </ion-list>
+</ion-content>

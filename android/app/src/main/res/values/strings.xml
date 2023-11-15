@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Dummy App</string>
+    <string name="title_activity_main">Dummy App</string>
+    <string name="package_name">com.alokProjects.dummyApp</string>
+    <string name="custom_url_scheme">com.alokProjects.dummyApp</string>
+    <string name="server_client_id">701455143477-48g9agrvjsmlsdr4dkq9iti7m7o483rn.apps.googleusercontent.com</string>
+</resources>
